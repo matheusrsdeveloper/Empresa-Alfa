@@ -205,6 +205,13 @@ h2 {
     line-height: 1.5;
 }
 
+.product-card .price {
+    margin: 0 20px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
 .product-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 35px rgba(0,0,0,0.12);
@@ -279,6 +286,18 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+footer a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* RESPONSIVO */
