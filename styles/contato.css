@@ -1,0 +1,168 @@
+:root {
+    --primary: #0d6efd;      /* azul principal */
+    --secondary: #00b4ff;    /* azul claro */
+    --dark: #0a0a0a;         /* preto */
+    --gray: #1f1f1f;         /* cinza escuro */
+    --light: #f5f7fa;        /* fundo claro */
+    --white: #ffffff;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: var(--light);
+    color: var(--dark);
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: var(--dark);
+    color: var(--white);
+    padding: 20px;
+    text-align: center; /* centraliza tudo */
+}
+
+/* deixa o título maior */
+header h1 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* centraliza os links abaixo do título */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+} 
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--secondary);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    color: var(--secondary);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* TITULOS */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+h2 {
+    margin: 30px 0 15px;
+    color: var(--dark);
+}
+
+/* ================= FORM ================= */
+form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    height: fit-content;
+}
+
+footer a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
